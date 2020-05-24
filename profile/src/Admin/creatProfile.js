@@ -30,12 +30,12 @@ class CreatProfile  extends React.Component{
     posts: []
   };
 
-  componentDidMount = () => {
+/*   componentDidMount = () => {
     this.getBlogPost();
   };
-
+*/
 // get data from db
-getBlogPost = () => {
+/*getBlogPost = () => {
   axios.get('/api')
     .then((response) =>{
       const data = response.data;
@@ -46,7 +46,7 @@ getBlogPost = () => {
         alert('Error retrieving data');
     });
 
-}
+}*/
 
 
 
