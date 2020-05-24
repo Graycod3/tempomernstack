@@ -1,0 +1,25 @@
+{
+  "name": "Login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd profile && npm run build",
+    "install-profile": "cd profile && npm install",
+    "heroku-postbuild": "npm run install-profile && npm run build",
+    "start": "node server.js",
+    "profile": "cd profile && npm start",
+    "dev": "concurrently -n 'server,profile' -c 'red,green' \"nodemon server.js\" \"npm run profile\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.15",
+    "morgan": "^1.10.0"
+  }
+}
