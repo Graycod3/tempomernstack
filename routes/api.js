@@ -20,7 +20,7 @@ router.get('/',(req, res)=>{
 // to save the posted data
 router.post('/save',(req, res)=>{
   console.log('Body: ', req.body);
-  
+
   const data = req.body;
 
   const newBlogPost = new BlogPost(data);
