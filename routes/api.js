@@ -25,7 +25,7 @@ router.post('/save',(req, res)=>{
   const newBlogPost = new BlogPost(data);
   console.log('NEW BLOGPOSTS', newBlogPost);
   // .save
-  newBlogPost.save((error) => {
+/*  newBlogPost.save((error) => {
       if (error) {
           res.status(500).json({msg: 'Sorry, internal server erros' });
           return
@@ -35,7 +35,14 @@ router.post('/save',(req, res)=>{
               msg: 'We received your data been saved'
           });
       }
-  })
+  })*/
+
+  BlogPost.create(data)
+              .then(newBlogPost1=> res.json(newBlogPost1))
+              .catch(err => res.status(422).json(err));
+
+  console.log('NEW BLOGPOSTS, mf w/ a sick d');
+
 
 });
 
