@@ -15,7 +15,7 @@ const routes = require('./routes/api')
 
 //step 2 heroku
 //process.env.MONGODB_URI ||
-mongoose.connect('process.env.MONGODB_URI || mongodb://localhost/mern_tempo',{
+mongoose.connect('process.env.MONGODB_URI',{
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
