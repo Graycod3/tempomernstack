@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 8080; // heroku use
 const routes = require('./routes/api')
 
 //const MONGODB_URI = 'mongodb+srv://ghotijs:ghotijs@tempocluster-pmwdg.mongodb.net/test?retryWrites=true&w=majority';
+//'mongodb+srv://ghotijs:ghotijs@tempocluster-pmwdg.mongodb.net/test?retryWrites=true&w=majority'
 
 //step 2 heroku
 //process.env.MONGODB_URI ||
