@@ -22,8 +22,8 @@ router.post('/save',(req, res)=>{
   console.log('Body: ', req.body);
 
   const data = req.body;
-
   const newBlogPost = new BlogPost(data);
+  console.log('NEW BLOGPOSTS', newBlogPost);
   // .save
   newBlogPost.save((error) => {
       if (error) {

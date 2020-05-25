@@ -93,10 +93,6 @@ const BlogPostSchema_two = new Schema({
    }
 })
 
-const AllSchema ={
-  first_half: BlogPostSchema,
-  second_half: BlogPostSchema_two
-}
 //Model
 const BlogPost = mongoose.model('users', BlogPostSchema);
 
