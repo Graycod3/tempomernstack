@@ -83,15 +83,11 @@ submit =(event) => {
   body: this.state.body
 };
 
-  axios({
-    url: '/api/save',
-    method: 'POST',
-    data: payload
-  })
-    .then(()=> {
+  axios.post('/api/save', payload)
+    .then((res)=> {
        console.log('Data in server NOW')
        this.resetUserInput();
-       this.getBlogPost();
+    //   this.getBlogPost();
     })
       .catch(() =>{
         console.log('Data NOT in server error')

@@ -24,7 +24,6 @@ router.post('/save',(req, res)=>{
   const data = req.body;
 
   const newBlogPost = new BlogPost(data);
-
   // .save
   newBlogPost.save((error) => {
       if (error) {
