@@ -17,8 +17,9 @@ const routes = require('./routes/api')
 //process.env.MONGODB_URI ||
 mongoose.connect('process.env.MONGODB_URI',{
   useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+  useUnifiedTopology: true,
+}).then(()=> console.log('MONGO CONNECTED..'))
+  .catch(err => console.log(err));
 
 mongoose.connection.on('connected', ()=> {
     console.log('Mongoose is connected!!!!');
@@ -34,11 +35,14 @@ if (process.env.NODE_ENV === 'production'){
     app.use(express.static('profile/build'));
 }
 
+
+// mongodb://heroku_hgwl82kv:df3SbjMq5uEt@Y@ds129315.mlab.com:29315/heroku_hgwl82kv
+
 //app.use(cors());
 
 // HTTP request Logger
 app.use(morgan('tiny'));
-app.use('/api', routes )
+app.use('/api', routes );
 
 
 app.listen(PORT, console.log(`Server is starting at ${PORT} `));
