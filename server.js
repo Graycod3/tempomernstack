@@ -16,8 +16,8 @@ const routes = require('./routes/api')
 //step 2 heroku
 //process.env.MONGODB_URI ||
 // ||"mongodb://localhost/mern_tempo"
-
-mongoose.connect("mongodb://heroku_hgwl82kv:qazwsxedc123@ds129315.mlab.com:29315/heroku_hgwl82kv",{
+// mongodb://heroku_hgwl82kv:qazwsxedc123@ds129315.mlab.com:29315/heroku_hgwl82kv
+mongoose.connect("mongodb+srv://ghotijs:ghotijs@tempocluster-pmwdg.mongodb.net/test?retryWrites=true&w=majority",{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).catch(err => console.log(err));
