@@ -17,7 +17,7 @@ const routes = require('./routes/api')
 //process.env.MONGODB_URI ||
 // ||"mongodb://localhost/mern_tempo"
 
-mongoose.connect(process.env.MONGODB_URI,{
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/mern_tempo",{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

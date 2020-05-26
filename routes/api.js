@@ -37,10 +37,11 @@ router.post('/save',(req, res)=>{
       }
   })*/
 
-  BlogPost.create(data)
+  newBlogPost.save().then(item => res.json(item));
+/*  BlogPost.create(data)
               .then(newBlogPost1=> res.json(newBlogPost1))
               .catch(err => res.status(422).json(err));
-
+*/
   console.log('NEW BLOGPOSTS, mf w/ a sick d');
 
 
