@@ -20,7 +20,7 @@ const routes = require('./routes/api')
 mongoose.connect(process.env.MONGODB_URI,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
-}).catch(err => console(err));
+}).catch(err => console.log(err));
 
 //.then(()=> console.log('MONGO CONNECTED..'))
 //  .catch(err => console.log(err));
