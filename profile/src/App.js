@@ -13,6 +13,7 @@ render(){
     <div>
       <CreatProfile/>
       <Info/>
+      <DisplayInfo/>
     </div>
   );
 }
