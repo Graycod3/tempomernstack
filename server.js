@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: false}));
 
 //step 3 heroku
 if (process.env.NODE_ENV === 'production'){
-    console.log(process.env.NODE_ENV);
+    console.log("checking heroku key");
     app.use(express.static('profile/build'));
 }
 
