@@ -17,10 +17,10 @@ const routes = require('./routes/api')
 //process.env.MONGODB_URI ||
 // ||"mongodb://localhost/mern_tempo"
 
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/mern_tempo",{
+mongoose.connect(process.env.MONGODB_URI,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+}).catch(err => console(err));
 
 //.then(()=> console.log('MONGO CONNECTED..'))
 //  .catch(err => console.log(err));
