@@ -15,11 +15,15 @@ const routes = require('./routes/api')
 
 //step 2 heroku
 //process.env.MONGODB_URI ||
-mongoose.connect('process.env.MONGODB_URI',{
+// ||"mongodb://localhost/mern_tempo"
+
+mongoose.connect(process.env.MONGODB_URI,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
-}).then(()=> console.log('MONGO CONNECTED..'))
-  .catch(err => console.log(err));
+});
+
+//.then(()=> console.log('MONGO CONNECTED..'))
+//  .catch(err => console.log(err));
 
 mongoose.connection.on('connected', ()=> {
     console.log('Mongoose is connected!!!!');
@@ -32,6 +36,7 @@ app.use(express.urlencoded({ extended: false}));
 
 //step 3 heroku
 if (process.env.NODE_ENV === 'production'){
+    console.log(process.env.NODE_ENV);
     app.use(express.static('profile/build'));
 }
 
